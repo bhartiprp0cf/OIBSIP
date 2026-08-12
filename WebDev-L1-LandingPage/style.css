@@ -1,0 +1,707 @@
+/* =========================
+   RESET & BASE
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f7f3eb;
+    color: #24221e;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(247, 243, 235, 0.96);
+
+    border-bottom: 1px solid #ded8cc;
+}
+
+.nav-container {
+    max-width: 1180px;
+    min-height: 74px;
+
+    margin: auto;
+    padding: 0 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 1.35rem;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav a {
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #d85b35;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 80% 35%,
+            #ead0c2 0,
+            transparent 32%
+        ),
+        #f7f3eb;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: auto;
+    padding: 100px 24px;
+}
+
+.eyebrow {
+    margin-bottom: 18px;
+
+    color: #d85b35;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    max-width: 850px;
+
+    margin-bottom: 28px;
+
+    font-size: clamp(3.5rem, 8vw, 7rem);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: #d85b35;
+
+    font-style: italic;
+}
+
+.hero-text {
+    max-width: 620px;
+
+    margin-bottom: 35px;
+
+    color: #625d55;
+
+    font-size: 1.15rem;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+}
+
+.primary-button {
+    display: inline-block;
+
+    padding: 15px 28px;
+
+    background: #24221e;
+    color: #ffffff;
+
+    border-radius: 3px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.primary-button:hover {
+    background: #d85b35;
+
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    padding: 14px 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    border-bottom: 1px solid #d85b35;
+}
+
+
+/* =========================
+   COMMON SECTIONS
+========================= */
+
+.section {
+    max-width: 1180px;
+
+    margin: auto;
+
+    padding: 110px 24px;
+}
+
+.section-heading {
+    max-width: 720px;
+
+    margin-bottom: 60px;
+}
+
+.section-heading h2 {
+    margin-bottom: 18px;
+
+    font-size: clamp(2.3rem, 5vw, 4rem);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+}
+
+.section-heading > p:last-child {
+    color: #706a62;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 1rem;
+}
+
+
+/* =========================
+   BOOK GRID
+========================= */
+
+.book-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 24px;
+}
+
+.book-card {
+    background: #ffffff;
+
+    border: 1px solid #e2ddd3;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 18px 35px rgba(50, 40, 30, 0.12);
+}
+
+
+/* =========================
+   BOOK COVERS
+========================= */
+
+.book-cover {
+    height: 300px;
+
+    margin: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    font-family: Georgia, serif;
+
+    font-size: 1.6rem;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    box-shadow:
+        5px 7px 12px rgba(0, 0, 0, 0.12);
+}
+
+.cover-one {
+    background: #7d8b67;
+}
+
+.cover-two {
+    background: #b36c45;
+}
+
+.cover-three {
+    background: #303d54;
+}
+
+.cover-four {
+    background: #7d4e4e;
+}
+
+
+/* =========================
+   BOOK INFORMATION
+========================= */
+
+.book-info {
+    padding: 5px 20px 25px;
+}
+
+.book-category {
+    margin-bottom: 5px;
+
+    color: #d85b35;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.book-info h3 {
+    margin-bottom: 3px;
+
+    font-size: 1.25rem;
+}
+
+.author {
+    color: #777068;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================
+   CHALLENGES / FEATURES
+========================= */
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+.feature-card {
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2ddd3;
+
+    border-radius: 4px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 30px rgba(50, 40, 30, 0.08);
+}
+
+.feature-number {
+    margin-bottom: 45px;
+
+    color: #d85b35;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.feature-card h3 {
+    margin-bottom: 12px;
+
+    font-size: 1.4rem;
+}
+
+.feature-card p {
+    color: #706a62;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 0.95rem;
+}
+
+
+/* =========================
+   COMMUNITY
+========================= */
+
+.community {
+    max-width: none;
+
+    background: #24221e;
+
+    color: #ffffff;
+}
+
+.community-content {
+    max-width: 1180px;
+
+    margin: auto;
+
+    padding: 0 24px;
+
+    display: grid;
+
+    grid-template-columns: 0.7fr 1.5fr;
+
+    gap: 80px;
+}
+
+.community .eyebrow {
+    color: #e58c70;
+}
+
+.community h2 {
+    max-width: 750px;
+
+    margin-bottom: 28px;
+
+    font-size: clamp(2.5rem, 5vw, 4.3rem);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+}
+
+.community-content p:not(.eyebrow) {
+    max-width: 680px;
+
+    margin-bottom: 18px;
+
+    color: #d1ccc4;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 1rem;
+}
+
+.text-link {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: #f0a48c;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-weight: 700;
+
+    border-bottom: 1px solid #d85b35;
+
+    padding-bottom: 4px;
+}
+
+
+/* =========================
+   TESTIMONIAL
+========================= */
+
+.testimonial {
+    text-align: center;
+}
+
+.testimonial-content {
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.quote {
+    margin-bottom: 25px;
+
+    font-size: clamp(1.8rem, 4vw, 3rem);
+
+    line-height: 1.25;
+
+    font-weight: 600;
+}
+
+.reviewer {
+    color: #777068;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+   FINAL CTA
+========================= */
+
+.final-cta {
+    padding: 110px 24px;
+
+    text-align: center;
+
+    background: #e3c6b8;
+}
+
+.final-cta h2 {
+    max-width: 750px;
+
+    margin: 0 auto 35px;
+
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 55px 24px 25px;
+
+    background: #191816;
+
+    color: #ffffff;
+}
+
+.footer-container {
+    max-width: 1180px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.footer-brand p {
+    margin-top: 8px;
+
+    color: #a7a29b;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 0.85rem;
+}
+
+.footer-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-links a {
+    color: #c4beb6;
+
+    font-size: 0.85rem;
+
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #e58c70;
+}
+
+.copyright {
+    max-width: 1180px;
+
+    margin: 45px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #37342f;
+
+    color: #77736d;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 0.75rem;
+}
+
+
+/* =========================
+   TABLET RESPONSIVENESS
+========================= */
+
+@media (max-width: 900px) {
+
+    .book-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .community-content {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 650px) {
+
+    .nav-container {
+        min-height: 65px;
+
+        padding: 0 16px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 0.72rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+
+        letter-spacing: 2px;
+    }
+
+    .hero {
+        min-height: 580px;
+    }
+
+    .hero-content {
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 80px 20px;
+    }
+
+    .book-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .book-cover {
+        height: 330px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .community-content {
+        padding: 0 20px;
+    }
+
+    .final-cta {
+        padding: 80px 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
